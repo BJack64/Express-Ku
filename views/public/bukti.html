@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExpressKu - Invoice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .invoice {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .invoice h1 {
+      text-align: center;
+    }
+    .invoice .info {
+      margin-bottom: 20px;
+    }
+    .invoice .info p {
+      margin: 5px 0;
+    }
+    .spasi {
+        margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+  <div class="invoice">
+    <h1>Invoice Pembelian Tiket</h1>
+    {{ range .buktis }}
+    <div class="info">
+      <p><strong>ID Tiket:</strong> {{ .IdTiket }}</p>
+      <p><strong>ID Jadwal:</strong> {{ .IdJadwal }}</p>
+      <p><strong>Tanggal Pembelian:</strong> {{ .TglPembelian }}</p>
+      <p><strong>Nama Penumpang:</strong> {{ .NamaPenumpang }}</p>
+      <p><strong>No Telepon:</strong> {{ .NoTelp }}</p>
+    </div>
+    <div class="spasi">
+        <h4>Tolong simpan Invoice ini dan bawa kepada petugas stasiun</h4>
+    </div>
+    <a href="/" class="btn btn-primary">Kembali</a>
+    {{ end }}
+  </div>
+</body>
+</html>

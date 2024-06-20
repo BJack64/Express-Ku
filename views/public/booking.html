@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html style="height:100%" lang="en-id">
+    <head nonce="ExcdTutFd++CJsqSH+NrpA==" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width"/>
+        <meta charSet="utf-8"/>
+        <title>ExpressKu - Booking</title>
+        <meta property="og:title" content="ExpressKu - Booking"/>
+        <meta name="description" content="ExpressKu - Booking"/>
+        <meta property="og:description" content="ExpressKu - Booking"/>
+        <style id="react-native-stylesheet">
+
+            html {
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+            }
+
+            body {
+                margin: 0;
+            }
+
+            button::-moz-focus-inner,input::-moz-focus-inner {
+                border: 0;
+                padding: 0;
+            }
+
+            input::-webkit-inner-spin-button,input::-webkit-outer-spin-button,input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration {
+                display: none;
+            }
+
+            :focus:not([data-focusvisible-polyfill]) {
+                outline: none;
+            }
+
+            .css-4rbku5 {
+                background-color: rgba(0,0,0,0.00);
+                color: inherit;
+                font: inherit;
+                list-style: none;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 0px;
+                text-align: inherit;
+                text-decoration: none;
+            }
+
+            .css-18t94o4 {
+                cursor: pointer;
+            }
+
+
+            .css-1dbjc4n {
+                -ms-flex-align: stretch;
+                -ms-flex-direction: column;
+                -ms-flex-negative: 0;
+                -ms-flex-preferred-size: auto;
+                -webkit-align-items: stretch;
+                -webkit-box-align: stretch;
+                -webkit-box-direction: normal;
+                -webkit-box-orient: vertical;
+                -webkit-flex-basis: auto;
+                -webkit-flex-direction: column;
+                -webkit-flex-shrink: 0;
+                align-items: stretch;
+                border: 0 solid black;
+                box-sizing: border-box;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                flex-basis: auto;
+                flex-direction: column;
+                flex-shrink: 0;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 0px;
+                min-height: 0px;
+                min-width: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+                padding-right: 0px;
+                padding-top: 0px;
+                position: relative;
+                z-index: 0;
+            }
+
+            .css-901oao {
+                border: 0 solid black;
+                box-sizing: border-box;
+                color: rgba(0,0,0,1.00);
+                display: inline;
+                font: 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+                padding-right: 0px;
+                padding-top: 0px;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+
+            .css-bfa6kz {
+                max-width: 100%;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .css-11aywtz {
+                background-color: rgba(0,0,0,0.00);
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border: 0 solid black;
+                box-sizing: border-box;
+                font: 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+                padding-right: 0px;
+                padding-top: 0px;
+                resize: none;
+            }
+
+            .css-16my406 {
+                color: inherit;
+                font: inherit;
+                white-space: inherit;
+            }
+
+            .r-bztko3 {
+                overflow-x: visible;
+                overflow-y: visible;
+            }
+
+            .r-1f0042m {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            .r-tuq35u {
+                padding-bottom: 4px;
+                padding-left: 4px;
+                padding-right: 4px;
+                padding-top: 4px;
+            }
+
+            .r-kdyh1x {
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+
+            .r-1udh08x {
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+
+            .r-6koalj {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+            }
+
+            .r-rs99b7 {
+                border-bottom-width: 1px;
+                border-left-width: 1px;
+                border-right-width: 1px;
+                border-top-width: 1px;
+            }
+
+            .r-qpntkw {
+                padding-bottom: 6px;
+                padding-left: 6px;
+                padding-right: 6px;
+                padding-top: 6px;
+            }
+
+            .r-1yadl64 {
+                border-bottom-width: 0px;
+                border-left-width: 0px;
+                border-right-width: 0px;
+                border-top-width: 0px;
+            }
+
+            .r-1cis278 {
+                margin-bottom: -1px;
+                margin-left: -1px;
+                margin-right: -1px;
+                margin-top: -1px;
+            }
+
+            .r-t60dpp {
+                padding-bottom: 0px;
+                padding-left: 0px;
+                padding-right: 0px;
+                padding-top: 0px;
+            }
+
+            .r-z2wwpe {
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+
+            .r-13awgt0 {
+                -ms-flex: 1 1 0%;
+                -webkit-flex: 1;
+                flex: 1;
+            }
+
+            .r-42olwf {
+                border-bottom-color: rgba(0,0,0,0.00);
+                border-left-color: rgba(0,0,0,0.00);
+                border-right-color: rgba(0,0,0,0.00);
+                border-top-color: rgba(0,0,0,0.00);
+            }
+
+            .r-u4s1nx {
+                border-bottom-color: rgba(180,180,180,1.00);
+                border-left-color: rgba(180,180,180,1.00);
+                border-right-color: rgba(180,180,180,1.00);
+                border-top-color: rgba(180,180,180,1.00);
+            }
+
+            .r-1ddqv6g {
+                border-bottom-color: rgba(218,218,218,1.00);
+                border-left-color: rgba(218,218,218,1.00);
+                border-right-color: rgba(218,218,218,1.00);
+                border-top-color: rgba(218,218,218,1.00);
+            }
+
+            .r-nsbfu8 {
+                padding-bottom: 16px;
+                padding-left: 16px;
+                padding-right: 16px;
+                padding-top: 16px;
+            }
+
+            .r-1dumxj3 {
+                margin-bottom: 2px;
+                margin-left: 2px;
+                margin-right: 2px;
+                margin-top: 2px;
+            }
+
+            .r-sdzlij {
+                border-bottom-left-radius: 9999px;
+                border-bottom-right-radius: 9999px;
+                border-top-left-radius: 9999px;
+                border-top-right-radius: 9999px;
+            }
+
+            .r-1dzdj1l {
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            .r-xoduu5 {
+                display: -webkit-inline-box;
+                display: -moz-inline-box;
+                display: -ms-inline-flexbox;
+                display: -webkit-inline-flex;
+                display: inline-flex;
+            }
+
+            .r-1l31rp8 {
+                border-bottom-color: rgba(205,208,209,1.00);
+                border-left-color: rgba(205,208,209,1.00);
+                border-right-color: rgba(205,208,209,1.00);
+                border-top-color: rgba(205,208,209,1.00);
+            }
+
+
+            .r-1jgb5lz {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .r-r0h9e2 {
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+
+            .r-1e081e0 {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .r-oyd9sg {
+                padding-bottom: 4px;
+                padding-top: 4px;
+            }
+
+            .r-1pn2ns4 {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .r-5njf8e {
+                padding-bottom: 8px;
+                padding-top: 8px;
+            }
+
+            .r-1w50u8q {
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+
+            .r-ymttw5 {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .r-s1qlax {
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+
+            .r-1p6iasa {
+                margin-bottom: 4px;
+                margin-top: 4px;
+            }
+
+            .r-1guathk {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .r-1yzf0co {
+                padding-bottom: 16px;
+                padding-top: 16px;
+            }
+
+            .r-1hy1u7s {
+                margin-left: 24px;
+                margin-right: 24px;
+            }
+
+            .r-ipm5af {
+                top: 0px;
+            }
+
+            .r-13qz1uu {
+                width: 100%;
+            }
+
+            .r-8ny0jo {
+                z-index: 101;
+            }
+
+            .r-iy1yoi {
+                -moz-transition: all ease 200ms;
+                -webkit-transition: all ease 200ms;
+                transition: all ease 200ms;
+            }
+
+            .r-1awozwy {
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                align-items: center;
+            }
+
+            .r-1777fci {
+                -ms-flex-pack: center;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+            }
+
+            .r-u8s1d {
+                position: absolute;
+            }
+
+            .r-82yag {
+                min-width: 1222px;
+            }
+
+            .r-wy61xf {
+                height: 72px;
+            }
+
+            .r-184en5c {
+                z-index: 1;
+            }
+
+            .r-14lw9ot {
+                background-color: rgba(255,255,255,1.00);
+            }
+
+            .r-10gryf7 {
+                min-height: 56px;
+            }
+
+            .r-18u37iz {
+                -ms-flex-direction: row;
+                -webkit-box-direction: normal;
+                -webkit-box-orient: horizontal;
+                -webkit-flex-direction: row;
+                flex-direction: row;
+            }
+
+            .r-1wtj0ep {
+                -ms-flex-pack: justify;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                justify-content: space-between;
+            }
+
+            .r-17yavnb {
+                width: 1222px;
+            }
+
+            .r-1b7u577 {
+                margin-right: 12px;
+            }
+
+            .r-1r8g8re {
+                height: 36px;
+            }
+
+            .r-lrvibr {
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -webkit-user-select: none;
+                user-select: none;
+            }
+
+            .r-t1w4ow {
+                font-family: Godwit,MuseoSans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+            }
+
+            .r-1b43r93 {
+                font-size: 14px;
+            }
+
+            .r-majxgm {
+                font-weight: 500;
+            }
+
+            .r-rjixqe {
+                line-height: 20px;
+            }
+
+            .r-fdjqy7 {
+                text-align: left;
+            }
+
+            .r-633pao {
+                pointer-events: none!important;
+            }
+
+            .r-1euycsn {
+                -ms-flex-direction: row-reverse;
+                -webkit-box-direction: reverse;
+                -webkit-box-orient: horizontal;
+                -webkit-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+            }
+
+            .r-q3we1 {
+                margin-top: -4px;
+            }
+
+            .r-j76wpu {
+                top: 100%;
+            }
+
+            .r-b4qz5r {
+                box-shadow: 0px 4px 10px rgba(3,18,26,0.15);
+            }
+
+            .r-4k2abt {
+                -webkit-transform-origin: top center;
+                transform-origin: top center;
+            }
+
+            .r-1ep47lj {
+                -webkit-transition-duration: 300ms;
+                transition-duration: 300ms;
+            }
+
+            .r-1clhhh9 {
+                -moz-transition-property: all;
+                -webkit-transition-property: all;
+                transition-property: all;
+            }
+
+            .r-1ftll1t {
+                -webkit-transition-timing-function: ease-out;
+                transition-timing-function: ease-out;
+            }
+
+            .r-1kb76zh {
+                margin-right: 8px;
+            }
+
+            .r-1q142lx {
+                -ms-flex-negative: 0;
+                -webkit-flex-shrink: 0;
+                flex-shrink: 0;
+            }
+
+            .r-1pi2tsx {
+                height: 100%;
+            }
+
+            .r-13hce6t {
+                margin-left: 4px;
+            }
+
+            .r-eafdt9 {
+                -webkit-transition-duration: 0.15s;
+                transition-duration: 0.15s;
+            }
+
+            .r-1i6wzkk {
+                -moz-transition-property: opacity;
+                -webkit-transition-property: opacity;
+                transition-property: opacity;
+            }
+
+            .r-1loqt21 {
+                cursor: pointer;
+            }
+
+            .r-1otgn73 {
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+            }
+
+            .r-10paoce {
+                outline-width: 0px;
+            }
+
+            .r-1vonz36 {
+                clip: rect(0,0,0,0);
+            }
+
+            .r-109y4c4 {
+                height: 1px;
+            }
+
+            .r-3s2u2q {
+                white-space: nowrap;
+            }
+
+            .r-92ng3h {
+                width: 1px;
+            }
+
+            .r-b88u0q {
+                font-weight: 700;
+            }
+
+            .r-q4m81j {
+                text-align: center;
+            }
+
+            .r-1o4mh9l {
+                font-size: 0.875rem;
+            }
+
+            .r-f0eezp {
+                line-height: 1rem;
+            }
+
+            .r-1ugchlj {
+                height: 44px;
+            }
+
+            .r-tzz3ar {
+                -ms-flex-wrap: nowrap;
+                -webkit-box-lines: nowrap;
+                -webkit-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+            }
+
+            .r-1ktosi0 {
+                max-width: 1222px;
+            }
+
+            .r-mrxtjd {
+                min-width: 720px;
+            }
+
+            .r-88pszg {
+                margin-right: 16px;
+            }
+
+            .r-1cwl3u0 {
+                line-height: 16px;
+            }
+
+            .r-mwx11u {
+                background-color: rgba(73,179,232,1.00);
+            }
+
+            .r-g5iea5 {
+                min-width: 976px;
+            }
+
+            .r-tskmnb {
+                padding-top: 8px;
+            }
+
+            .r-bnwqim {
+                position: relative;
+            }
+
+            .r-1kihuf0 {
+                -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
+                -webkit-align-self: center;
+                align-self: center;
+            }
+
+            .r-pbsvq8 {
+                height: 280px;
+            }
+
+            .r-hg31tb {
+                padding-left: 488px;
+            }
+
+            .r-ttdzmv {
+                padding-top: 12px;
+            }
+
+            .r-1xzirlb {
+                width: 976px;
+            }
+
+            .r-pezta {
+                z-index: 5;
+            }
+
+            .r-bajy9j {
+                height: 230px;
+            }
+
+            .r-1d2f490 {
+                left: 0px;
+            }
+
+            .r-1ah4tor {
+                padding-right: 20px;
+            }
+
+            .r-1qd7xl {
+                top: 12px;
+            }
+
+            .r-hkbxmu {
+                -moz-transition: all .2s ease-out;
+                -webkit-transition: all .2s ease-out;
+                transition: all .2s ease-out;
+            }
+
+            .r-1s329i0 {
+                width: 488px;
+            }
+
+            .r-1x35g6 {
+                font-size: 24px;
+            }
+
+            .r-vrz42v {
+                line-height: 28px;
+            }
+
+            .r-adyw6z {
+                font-size: 20px;
+            }
+
+            .r-135wba7 {
+                line-height: 24px;
+            }
+
+            .r-1p0dtai {
+                bottom: 0px;
+            }
+
+            .r-kzbkwu {
+                padding-bottom: 12px;
+            }
+
+            .r-zchlnj {
+                right: 0px;
+            }
+
+            .r-1enofrn {
+                font-size: 12px;
+            }
+
+            .r-1y80485 {
+                background-color: rgba(3,18,26,1.00);
+            }
+
+            .r-6dt33c {
+                opacity: 1;
+            }
+
+            .r-1xcajam {
+                position: fixed;
+            }
+
+            .r-a8aa9x {
+                -moz-transition: opacity .2s ease-out;
+                -webkit-transition: opacity .2s ease-out;
+                transition: opacity .2s ease-out;
+            }
+
+            .r-uwe93p {
+                width: 960px;
+            }
+
+            .r-8fdsdq {
+                z-index: 4;
+            }
+
+            .r-ubezar {
+                font-size: 16px;
+            }
+
+            .r-obd0qt {
+                -ms-flex-align: end;
+                -webkit-align-items: flex-end;
+                -webkit-box-align: end;
+                align-items: flex-end;
+            }
+
+            .r-1pozq62 {
+                z-index: 10000;
+            }
+
+            .r-eqz5dr {
+                -ms-flex-direction: column;
+                -webkit-box-direction: normal;
+                -webkit-box-orient: vertical;
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .r-1sg8ghl {
+                z-index: 1000;
+            }
+
+            .r-16l9doz {
+                height: auto;
+            }
+
+            .r-1dqbpge {
+                cursor: -webkit-text;
+                cursor: text;
+            }
+
+            .r-15ysp7h {
+                min-height: 32px;
+            }
+
+            .r-13l2t4g {
+                border-right-width: 1px;
+            }
+
+            .r-1yvhtrz {
+                width: 32px;
+            }
+
+            .r-1w6e6rj {
+                -ms-flex-wrap: wrap;
+                -webkit-box-lines: multiple;
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+
+            .r-m2pi6t {
+                padding-left: 4px;
+            }
+
+            .r-1hvjb8t {
+                padding-right: 4px;
+            }
+
+            .r-1h8ys4a {
+                padding-top: 4px;
+            }
+
+            .r-1472mwg {
+                height: 24px;
+            }
+
+            .r-dnmrzs {
+                max-width: 100%;
+            }
+
+            .r-nbvd2x {
+                outline-color: #FFFFFF;
+            }
+
+            .r-136ojw6 {
+                z-index: 2;
+            }
+
+            .r-e0sylz {
+                background-color: rgba(244,85,90,1.00);
+            }
+
+            .r-orgf3d {
+                opacity: 0;
+            }
+
+            .r-417010 {
+                z-index: 0;
+            }
+
+            .r-da5iq2 {
+                box-shadow: 0px 1px 2px rgba(3,18,26,0.20);
+            }
+
+            .r-qklmqi {
+                border-bottom-width: 1px;
+            }
+
+            .r-xd6kpl {
+                padding-bottom: 8px;
+            }
+
+            .r-1qhn6m8 {
+                padding-left: 16px;
+            }
+
+            .r-i023vh {
+                padding-right: 16px;
+            }
+
+            .r-akgwms {
+                background-color: rgba(246,246,246,1.00);
+            }
+
+            .r-1d09ksm {
+                -ms-flex-align: baseline;
+                -webkit-align-items: baseline;
+                -webkit-box-align: baseline;
+                align-items: baseline;
+            }
+
+            .r-19eyfmh {
+                width: 640px;
+            }
+
+            .r-1janqcz {
+                width: 16px;
+            }
+
+            .r-k200y {
+                -ms-flex-item-align: start;
+                -webkit-align-self: flex-start;
+                align-self: flex-start;
+            }
+
+            .r-1wbh5a2 {
+                -ms-flex-negative: 1;
+                -webkit-flex-shrink: 1;
+                flex-shrink: 1;
+            }
+
+            .r-19u6a5r {
+                margin-left: 12px;
+            }
+
+            .r-1m7fwk6 {
+                margin-left: -2px;
+            }
+
+            .r-1k97etb {
+                background-color: rgba(1,148,243,1.00);
+            }
+
+            .r-3da1kt {
+                height: 8px;
+            }
+
+            .r-zso239 {
+                margin-right: 10px;
+            }
+
+            .r-1jg9483 {
+                width: 8px;
+            }
+
+            .r-56xrmm {
+                line-height: 12px;
+            }
+
+            .r-1d4mawv {
+                margin-right: 4px;
+            }
+
+            .r-aoullt {
+                background-color: rgba(28,41,48,1.00);
+            }
+
+            .r-1l7z4oj {
+                padding-bottom: 16px;
+            }
+
+            .r-bqdgw5 {
+                padding-top: 56px;
+            }
+
+            .r-169s5xo {
+                margin-bottom: 100px;
+            }
+
+            .r-16y2uox {
+                -ms-flex-positive: 1;
+                -webkit-box-flex: 1;
+                -webkit-flex-grow: 1;
+                flex-grow: 1;
+            }
+
+            .r-1o44xyg {
+                background-color: rgba(53,65,72,1.00);
+            }
+
+            .r-1kfrs79 {
+                font-weight: 600;
+            }
+
+            .r-jwli3a {
+                color: rgba(255,255,255,1.00);
+            }
+
+            .r-h3s6tt {
+                height: 48px;
+            }
+
+            .r-5oul0u {
+                margin-bottom: 8px;
+            }
+
+            .r-1blnp2b {
+                width: 72px;
+            }
+
+            .r-b8tw3c {
+                width: 33.33%;
+            }
+
+            .r-zd98yo {
+                margin-bottom: 32px;
+            }
+
+            .r-1ebb2ja {
+                list-style: none;
+            }
+
+            .r-6gpygo {
+                margin-bottom: 12px;
+            }
+
+            .r-nzoivv {
+                opacity: 0.65;
+            }
+
+            .r-1peese0 {
+                margin-bottom: 24px;
+            }
+
+            .r-1mnahxq {
+                margin-top: 0px;
+            }
+
+            .r-ypl6q8 {
+                opacity: 0.15;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="__next" data-reactroot="">
+            <script nonce="na" src="https://d9253bf4bdfd.edge.sdk.awswaf.com/d9253bf4bdfd/1fcfec27aa97/challenge.compact.js" type="text/javascript" defer=""></script>
+            <div class="css-1dbjc4n r-bztko3 r-ipm5af r-iy1yoi r-13qz1uu r-8ny0jo" style="position:sticky">
+                <div class="css-1dbjc4n r-1awozwy r-1777fci r-u8s1d r-ipm5af r-13qz1uu">
+                    <div class="css-1dbjc4n r-82yag"></div>
+                </div>
+                <div class="css-1dbjc4n r-wy61xf r-1jgb5lz r-r0h9e2 r-u8s1d r-13qz1uu r-184en5c" style="background-image:linear-gradient(3.141592653589793rad,rgba(3, 18, 26, 0.325) 50%,rgba(3, 18, 26, 0) 100%)">
+                    <div class="css-1dbjc4n r-1awozwy r-14lw9ot r-1777fci r-10gryf7 r-82yag r-iy1yoi r-13qz1uu r-184en5c" style="border-bottom-color:rgba(247,249,250,1.00);border-bottom-width:1px;box-shadow:0px 1px 2px rgba(3,18,26,0.20);position:relative">
+                        <div class="css-1dbjc4n r-18u37iz r-1wtj0ep r-1e081e0 r-oyd9sg r-17yavnb r-184en5c">
+                            <div class="css-1dbjc4n r-1awozwy r-18u37iz">
+                                <a href="/en-id" class="css-4rbku5">
+                                  
+                                </a>
+                            </div>
+                        </div>
+                        <div class="css-1dbjc4n r-13qz1uu">
+                            <div class="css-1dbjc4n r-1awozwy r-6koalj r-1ugchlj r-13qz1uu" data-testid="product-nav">
+                                <div class="css-1dbjc4n r-18u37iz r-tzz3ar r-1pi2tsx r-1ktosi0 r-mrxtjd r-s1qlax r-13qz1uu">
+                                    <a href="/booking" class="css-4rbku5 r-1awozwy r-kdyh1x r-6koalj r-88pszg r-1p6iasa r-1pn2ns4">
+                                        <div aria-level="4" dir="auto" class="css-901oao r-t1w4ow r-1b43r93 r-b88u0q r-1cwl3u0 r-fdjqy7" style="color:rgba(104,113,118,1.00)">Booking</div>
+                                    </a>
+                                    <a href="/browsing" class="css-4rbku5 r-1awozwy r-kdyh1x r-6koalj r-88pszg r-1p6iasa r-1pn2ns4">
+                                        <div aria-level="4" dir="auto" class="css-901oao r-t1w4ow r-1b43r93 r-b88u0q r-1cwl3u0 r-fdjqy7" style="color:rgba(104,113,118,1.00)">Browsing</div>
+                                    </a>
+                                    <a href="/admin" class="css-4rbku5 r-1awozwy r-kdyh1x r-6koalj r-88pszg r-1p6iasa r-1pn2ns4">
+                                        <div aria-level="4" dir="auto" class="css-901oao r-t1w4ow r-1b43r93 r-b88u0q r-1cwl3u0 r-fdjqy7" style="color:rgba(104,113,118,1.00)">Admin</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="css-1dbjc4n" style="height:100px" id="navbar-offset"></div>
+            <div class="css-1dbjc4n" data-testid="StandarizedOTPFlow"></div>
+            <div class="    ">
+                <div class="css-1dbjc4n r-1udh08x r-tskmnb r-bnwqim r-13qz1uu" style="background-image:linear-gradient(3.141592653589793rad,rgba(0, 160, 255, 0),rgba(7, 112, 205,1))">
+                    <div class="css-1dbjc4n r-1kihuf0 r-pbsvq8 r-hg31tb r-ttdzmv r-bnwqim r-1xzirlb r-pezta">
+                        <div class="css-1dbjc4n r-bajy9j r-1777fci r-1d2f490 r-1ah4tor r-u8s1d r-1qd7xl r-hkbxmu r-1s329i0" style="opacity:1;-webkit-transform:scale(1);transform:scale(1)">
+                            <h1></h1>
+                            <h2 aria-level="1" dir="auto" role="heading" class="css-4rbku5 css-901oao r-t1w4ow r-majxgm r-135wba7 r-fdjqy7" style="color:rgba(255,255,255,1.00);font-size:40px">ExpressKu Ticket Booking</h2>
+                            <h3></h3>
+                            <h4 aria-level="2" dir="auto" role="heading" class="css-4rbku5 css-901oao r-t1w4ow r-majxgm r-135wba7 r-fdjqy7" style="color:rgba(255,255,255,1.00);font-size:25px">Pilih kota asal anda, kota destinasi dan tanggal keberangkatan untuk mencari jadwal yang sesuai</h4>
+                        </div>
+                        <div style="overflow-x:visible;width:488px">
+                            <div style="-webkit-flex-direction:row;flex-direction:row;-webkit-transition:all 0s ease 0s;transition:all 0s ease 0s;direction:ltr;display:flex;will-change:transform" class="react-swipeable-view-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contentWrapper">
+                <div class="mcp-placeholder" data-name="content">
+                    <div class="css-1dbjc4n r-13qz1uu" style="background-color:rgba(7,112,205,1.00);height:42px;margin-bottom:-42px"></div>
+                    <div class="css-1dbjc4n" style="z-index:4">
+                        <div class="css-1dbjc4n r-1y80485 r-1p0dtai r-1pi2tsx r-1d2f490 r-633pao r-1xcajam r-zchlnj r-ipm5af r-a8aa9x r-13qz1uu" style="opacity:0"></div>
+                        <div class="css-1dbjc4n r-1jgb5lz r-uwe93p">
+                            <div class="css-1dbjc4n r-14lw9ot r-z2wwpe r-b4qz5r r-bztko3 r-uwe93p r-8fdsdq">
+                                <div class="css-1dbjc4n" style="padding-top:16px;padding-right:16px;padding-bottom:16px;padding-left:16px">
+                                    <div class="css-1dbjc4n" style="-webkit-align-items:stretch;align-items:stretch;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-ms-flex-align:stretch;-webkit-box-align:stretch;-webkit-box-orient:vertical;-webkit-box-direction:normal">
+                                        <div class="css-1dbjc4n">
+                                            <h3 aria-level="3" dir="auto" role="heading" class="css-4rbku5 css-901oao r-t1w4ow r-ubezar r-b88u0q r-rjixqe r-fdjqy7" style="color:rgba(3,18,26,1.00)" data-testid="train-desktop-search-form-title">Booking Tiket Kereta</h3>
+                                        </div>
+                                        <div class="css-1dbjc4n" style="padding-bottom:16px"></div>
+                                        <div class="css-1dbjc4n r-obd0qt r-6koalj r-13awgt0 r-18u37iz r-1pozq62" style="-webkit-flex-basis:60px;flex-basis:60px;-webkit-flex-grow:0;flex-grow:0;-ms-flex-preferred-size:60px;-ms-flex-positive:0;-webkit-box-flex:0">
+                                            <div class="css-1dbjc4n r-6koalj r-13awgt0 r-eqz5dr r-1sg8ghl">
+                                                <div dir="auto" class="css-901oao r-t1w4ow r-ubezar r-135wba7 r-fdjqy7" style="color:rgba(3,18,26,1.00);font-weight:900">Kota Asal</div>
+                                                <div class="css-1dbjc4n r-13awgt0 r-13qz1uu">
+                                                    <div class="css-1dbjc4n r-16l9doz r-bnwqim r-13qz1uu">
+                                                        <div>
+                                                            <div tabindex="0" class="css-1dbjc4n r-42olwf r-z2wwpe r-rs99b7 r-1udh08x">
+                                                                <div class="css-1dbjc4n r-14lw9ot r-u4s1nx r-z2wwpe r-rs99b7 r-1dqbpge r-6koalj r-18u37iz r-15ysp7h r-1udh08x">
+                                                                    <div class="css-1dbjc4n r-u4s1nx r-13l2t4g r-tuq35u r-1yvhtrz">
+                                                                        <img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/1/1ee9aa06091d1ed2967d43ccaec69a28.svg"/>
+                                                                    </div>
+                                                                    <div class="css-1dbjc4n r-1awozwy r-6koalj r-13awgt0 r-18u37iz r-1w6e6rj r-16l9doz r-m2pi6t r-1hvjb8t r-1h8ys4a">
+                                                                        <div class="css-1dbjc4n r-1472mwg r-dnmrzs r-1udh08x r-bnwqim" style="-webkit-flex-grow:1;flex-grow:1;-ms-flex-positive:1;-webkit-box-flex:1">
+                                                                            <input type="text" id="kota_asal" name="kota_asal" placeholder="Masukkan Kota Asal" spellcheck="false" value="" autoCapitalize="sentences" autoComplete="arbitaryDisableBrowserAutocomplete" autoCorrect="on" dir="auto" class="css-11aywtz r-1p0dtai r-1d2f490 r-1cwl3u0 r-nbvd2x r-u8s1d r-ipm5af r-13qz1uu r-136ojw6" style="margin-bottom:4px" data-testid="train-desktop-search-form-origin-input"/>
+                                                                            <div dir="auto" class="css-901oao r-e0sylz r-orgf3d r-417010"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="css-1dbjc4n r-16l9doz r-u8s1d r-j76wpu r-13qz1uu r-8fdsdq">
+                                                                <div style="height:0;transform-origin:top;transform:scaleY(0);transition:height 0s ease 0.4s , transform 0.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s , opacity 0.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s;opacity:0;will-change:transform">
+                                                                    <div class="css-1dbjc4n r-14lw9ot r-kdyh1x r-da5iq2 r-1pi2tsx r-1udh08x r-13qz1uu">
+                                                                        <div style="opacity:0;transform:translateY(-20px);transition:0.2s ease;height:0;overflow:auto;will-change:transform">
+                                                                            <div class="css-1dbjc4n">
+                                                                                <div class="css-1dbjc4n r-akgwms r-qklmqi r-1ddqv6g r-xd6kpl r-1qhn6m8 r-i023vh r-tskmnb r-13qz1uu r-136ojw6">
+                                                                                    <div dir="auto" class="css-901oao r-t1w4ow r-1b43r93 r-majxgm r-rjixqe r-fdjqy7" style="color:rgba(104,113,118,1.00)">Type a city or station name</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="css-1dbjc4n r-6koalj r-13awgt0 r-eqz5dr r-1sg8ghl">
+                                                <div dir="auto" class="css-901oao r-t1w4ow r-ubezar r-135wba7 r-fdjqy7" style="color:rgba(3,18,26,1.00);font-weight:900">Kota Tujuan</div>
+                                                <div class="css-1dbjc4n r-13awgt0 r-13qz1uu">
+                                                    <div class="css-1dbjc4n r-16l9doz r-bnwqim r-13qz1uu">
+                                                        <div>
+                                                            <div tabindex="0" class="css-1dbjc4n r-42olwf r-z2wwpe r-rs99b7 r-1udh08x">
+                                                                <div class="css-1dbjc4n r-14lw9ot r-u4s1nx r-z2wwpe r-rs99b7 r-1dqbpge r-6koalj r-18u37iz r-15ysp7h r-1udh08x">
+                                                                    <div class="css-1dbjc4n r-u4s1nx r-13l2t4g r-tuq35u r-1yvhtrz">
+                                                                        <img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/f/fcff42fccb8c7531c7cb9f93a0f758a8.svg"/>
+                                                                    </div>
+                                                                    <div class="css-1dbjc4n r-1awozwy r-6koalj r-13awgt0 r-18u37iz r-1w6e6rj r-16l9doz r-m2pi6t r-1hvjb8t r-1h8ys4a">
+                                                                        <div class="css-1dbjc4n r-1472mwg r-dnmrzs r-1udh08x r-bnwqim" style="-webkit-flex-grow:1;flex-grow:1;-ms-flex-positive:1;-webkit-box-flex:1">
+                                                                            <input type="text" id="kota_tujuan" name="kota_tujuan" placeholder="Masukkan Kota Tujuan" spellcheck="false" value="" autoCapitalize="sentences" autoComplete="arbitaryDisableBrowserAutocomplete" autoCorrect="on" dir="auto" class="css-11aywtz r-1p0dtai r-1d2f490 r-1cwl3u0 r-nbvd2x r-u8s1d r-ipm5af r-13qz1uu r-136ojw6" style="margin-bottom:4px" data-testid="train-desktop-search-form-destination-input"/>
+                                                                            <div dir="auto" class="css-901oao r-e0sylz r-orgf3d r-417010"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="css-1dbjc4n r-16l9doz r-u8s1d r-j76wpu r-13qz1uu r-8fdsdq">
+                                                                <div style="height:0;transform-origin:top;transform:scaleY(0);transition:height 0s ease 0.4s , transform 0.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s , opacity 0.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s;opacity:0;will-change:transform">
+                                                                    <div class="css-1dbjc4n r-14lw9ot r-kdyh1x r-da5iq2 r-1pi2tsx r-1udh08x r-13qz1uu">
+                                                                        <div style="opacity:0;transform:translateY(-20px);transition:0.2s ease;height:0;overflow:auto;will-change:transform">
+                                                                            <div class="css-1dbjc4n">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="css-1dbjc4n" style="padding-bottom:16px"></div>
+                                        <div class="css-1dbjc4n r-1d09ksm r-6koalj r-13awgt0 r-18u37iz r-8fdsdq">
+                                            <div class="css-1dbjc4n r-obd0qt r-6koalj r-13awgt0 r-18u37iz r-1pozq62">
+                                                <div class="css-1dbjc4n r-6koalj r-13awgt0 r-eqz5dr r-1sg8ghl">
+                                                    <div dir="auto" class="css-901oao r-t1w4ow r-ubezar r-135wba7 r-fdjqy7" style="color:rgba(3,18,26,1.00);font-weight:900">Tanggal Keberangkatan</div>
+                                                    <div class="css-1dbjc4n r-13awgt0 r-13qz1uu">
+                                                        <div class="css-1dbjc4n r-16l9doz r-bnwqim r-13qz1uu">
+                                                            <div>
+                                                                <div tabindex="0" class="css-1dbjc4n r-42olwf r-z2wwpe r-rs99b7 r-1udh08x">
+                                                                    <div class="css-1dbjc4n r-14lw9ot r-u4s1nx r-z2wwpe r-rs99b7 r-1dqbpge r-6koalj r-18u37iz r-15ysp7h r-1udh08x">
+                                                                        <div class="css-1dbjc4n r-u4s1nx r-13l2t4g r-tuq35u r-1yvhtrz">
+                                                                            <img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/7/7c5c4d7a3eadee1c20abaa86c60d0888.svg"/>
+                                                                        </div>                                                                   
+                                                                            <input type="date" name="tgl_berangkat" id="tgl_berangkat" class="form-control" style="width: 100%; display: inline; border-color:rgba(180,180,180,0.01)">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="css-1dbjc4n r-16l9doz r-u8s1d r-j76wpu r-19eyfmh r-8fdsdq">
+                                                                    <div style="height:0;transform-origin:top;transform:scaleY(0);transition:height 0s ease 0.4s , transform 0.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s , opacity 0.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s;opacity:0;will-change:transform">
+                                                                        <div class="css-1dbjc4n r-14lw9ot r-kdyh1x r-da5iq2 r-1pi2tsx r-1udh08x r-19eyfmh">
+                                                                            <div style="opacity:0;transform:translateY(-20px);transition:0.2s ease;height:0;overflow:auto;will-change:transform">
+                                                                                <div class="css-1dbjc4n">
+                                                                                    <span></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="css-1dbjc4n r-1janqcz"></div>
+                                                <div class="css-1dbjc4n r-6koalj r-13awgt0 r-eqz5dr r-1sg8ghl">
+                                                    <div aria-checked="false" tabindex="0" class="css-1dbjc4n r-1awozwy r-k200y r-1loqt21 r-18u37iz r-6dt33c r-t60dpp r-1otgn73">
+                                                    </div>
+                                                    <div style="height:34px"></div>
+                                                </div>
+                                            </div>
+                                            <div class="css-1dbjc4n r-1janqcz"></div>
+                                            <div class="css-1dbjc4n r-1d09ksm r-6koalj r-13awgt0 r-18u37iz">
+                                                <div class="css-1dbjc4n r-6koalj r-13awgt0 r-eqz5dr r-1sg8ghl">
+                                                <div class="css-1dbjc4n r-1janqcz"></div>
+                                                <div class="css-1dbjc4n r-1kihuf0 r-ttdzmv">
+                                                    <button type="submit" onclick="handleSearch()" class="css-18t94o4 css-1dbjc4n r-kdyh1x r-1loqt21 r-10paoce r-1e081e0 r-5njf8e r-1otgn73 r-lrvibr" style="background-color:rgba(255,94,31,1.00)">
+                                                        <script>
+                                                            function handleSearch() {
+                                                                var kotaAsal = document.getElementById('kota_asal').value;
+                                                                var kotaTujuan = document.getElementById('kota_tujuan').value;
+                                                                var tglBerangkat = document.getElementById('tgl_berangkat').value;
+
+                                                                var link = '/finalisasi?kotaAsal=' + encodeURIComponent(kotaAsal) + '&kotaTujuan=' + encodeURIComponent(kotaTujuan) + '&tglBerangkat=' + encodeURIComponent(tglBerangkat);
+                                                    
+                                                                window.location.href = link;
+                                                            }
+                                                        </script>
+                                                        <div dir="auto" class="css-901oao r-1yadl64 r-1vonz36 r-109y4c4 r-1cis278 r-1udh08x r-t60dpp r-u8s1d r-3s2u2q r-92ng3h">Cari Jadwal</div>
+                                                        <div class="css-1dbjc4n r-1awozwy r-13awgt0 r-18u37iz r-1777fci r-6dt33c">
+                                                            <div dir="auto" aria-hidden="true" class="css-901oao r-1awozwy r-6koalj r-1d4mawv" style="color:rgba(255,255,255,1.00)">
+                                                                <img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/6/68a17a4492b3b7647bb89a5a03b15de0.svg"/>
+                                                            </div>
+                                                                <div dir="auto" aria-hidden="true" href="/finalisasi" class="css-901oao css-bfa6kz r-t1w4ow r-1o4mh9l r-b88u0q r-f0eezp r-q4m81j" style="color:rgba(255,255,255,1.00)">Cari Jadwal</div>
+                                                            </a>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>        
+        </body>
+    </html>
